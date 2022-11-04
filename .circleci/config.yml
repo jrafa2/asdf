@@ -13,21 +13,10 @@ jobs:
       - run:
           command: yarn jest
           name: Run tests
-      - run:
-          command: yarn build
-          name: Build app
       - persist_to_workspace:
           root: ~/src
           paths:
             - .
-
-  deploy: # this can be any name you choose
-    executor: heroku/default
-    steps:
-      - attach_workspace:
-          at: ~/src
-      - heroku/deploy-via-git:
-          force: true # force push when pushing to the heroku remote, see: https://devcenter.heroku.com/articles/git
 
 workflows:
   test_my_app:
