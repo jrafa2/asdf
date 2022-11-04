@@ -5,6 +5,7 @@ orbs:
 
 jobs:
   build_and_test:
+    working_directory: ~/project/src
     executor: node/default
     steps:
       - checkout
@@ -21,7 +22,8 @@ jobs:
           paths:
             - .
 
-  deploy: # this can be any name you choose
+  deploy: # this can be any name you choose+
+    working_directory: ~/project/src
     executor: heroku/default
     steps:
       - attach_workspace:
