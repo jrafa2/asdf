@@ -5,6 +5,7 @@
   "scripts": {
     "test": "jest"
   },
+  "license": "ISC",
   "devDependencies": {
     "jest": "^29.2.2",
     "eslint": "^8.26.0",
