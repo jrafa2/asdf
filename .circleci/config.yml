@@ -27,7 +27,6 @@ jobs:
       - run:
           command: yarn jest
           name: Run tests
-      - test-results-for: jest
 
   # Second job: static analysis. Check syntax, style, etc.
   analysis:
