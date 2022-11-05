@@ -17,6 +17,7 @@ workflows:
 # Each job, see workflows list
 jobs:
   # First job: run jest to execute unit tests
+  # Note it either needs to find Package.json at root or "app-dir". See https://circleci.com/developer/orbs/orb/circleci/node
   test:
     executor: node/default
     steps:
