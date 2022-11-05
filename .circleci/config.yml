@@ -31,6 +31,8 @@ jobs:
     executor: node/default
     steps:
       - node/install-packages:
+          pkg-manager: npm
+      - node/install-packages:
           pkg-manager: eslint
       - run:
           command: npx eslint *.js
