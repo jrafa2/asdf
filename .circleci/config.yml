@@ -21,7 +21,6 @@ jobs:
     executor: node/default
     steps:
       - checkout
-      - node/install-npm
       - node/install-packages:
           pkg-manager: jest
       - run:
