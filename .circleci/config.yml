@@ -31,9 +31,9 @@ jobs:
     executor: node/default
     steps:
       - node/install-packages:
-          override-ci-command: npm install
+          pkg-manager: yarn
       - run:
-          command: npx eslint *.js
+          command: yarn eslint *.js
           name: Run linter
 
 
