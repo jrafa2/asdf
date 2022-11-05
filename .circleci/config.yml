@@ -12,7 +12,6 @@ workflows:
   test_my_app:
     jobs:
       - test
-        test-results-for: jest
       - analysis
 
 # Each job, see workflows list
@@ -28,7 +27,7 @@ jobs:
       - run:
           command: yarn jest
           name: Run tests
-      - test-results-for: jest
+    test-results-for: jest
 
   # Second job: static analysis. Check syntax, style, etc.
   analysis:
