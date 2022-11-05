@@ -34,7 +34,7 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - run:
-          command: yarn jest
+          command: yarn eslint
           name: Run linter
 
 
