@@ -1,11 +1,13 @@
 version: 2.1
 
 # Machine to use
-# orb contains node.js and package managers (like npm)
-# heroku contains a lot of optimizations for circleci
+# orb is a code snippet that contains several scrits ready to use
+#     node is a machine with node.js and package managers (like npm) and other scripts
+#     heroku is a hosting server
+# See https://circleci.com/docs/orb-intro/?section=configuration
 orbs:
   node: circleci/node@5.0.2
-  heroku: circleci/heroku@1.2.6
+#  heroku: circleci/heroku@1.2.6
 
 # Entry point: List of job and execution order
 workflows:
@@ -13,6 +15,7 @@ workflows:
     jobs:
       - test
       - analysis
+#      - deploy
 
 # Each job, see workflows list
 jobs:
