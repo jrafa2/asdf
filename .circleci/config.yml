@@ -31,7 +31,7 @@ jobs:
     executor: node/default
     steps:
       - node/install-packages:
-          pkg-manager: npm
+          override-ci-command: npm install
       - node/install-packages:
           pkg-manager: eslint
       - run:
