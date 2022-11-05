@@ -30,10 +30,11 @@ jobs:
   analysis:
     executor: node/default
     steps:
+      - checkout
       - node/install-packages:
           pkg-manager: yarn
       - run:
-          command: yarn eslint *.js
+          command: yarn jest
           name: Run linter
 
 
