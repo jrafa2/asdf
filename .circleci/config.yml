@@ -22,9 +22,9 @@ jobs:
     steps:
       - checkout
       - node/install-packages:
-          pkg-manager: jest
+          pkg-manager: yarn
       - run:
-          command: jest
+          command: yarn jest
           name: Run tests
   # Second job: static analysis. Check syntax, style, etc.
   analysis:
