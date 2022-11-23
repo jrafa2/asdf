@@ -15,7 +15,6 @@ jobs:
         with:
           node-version: '14'
           cache: npm
-          cache-dependency-path: '**/package-lock.json'
 
       - name: Set up testing environment
         run: npm install -g jest
