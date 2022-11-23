@@ -2,6 +2,9 @@ name: TestManual
 
 on: [push, pull_request]
 
+env:
+  TEST_FOLDER: src
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,21 +19,16 @@ jobs:
           node-version: 16.x
           
       - name: Run npm install
-        working-directory: ./src
+        working-directory: ./${{env.TEST_FOLDER}}
         run: |
-          pwd
           npm install
         
       - name: Install jest
-        working-directory: ./src
+        working-directory: ./${{env.TEST_FOLDER}}
         run: |
-          pwd
           npm install jest
 
       - name: Run tests
-        working-directory: ./src
+        working-directory: ./${{env.TEST_FOLDER}}
         run: |
-          ls
-          pwd
-          whereis jest
           yarn jest
