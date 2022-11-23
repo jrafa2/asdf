@@ -1,4 +1,4 @@
-name: CI
+name: TestManual
 
 on: [push, pull_request]
 
@@ -13,9 +13,9 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: 16
           cache: 'npm'
-          cache-dependency-path: tests/package-lock.json
+          cache-dependency-path: 'tests/package-lock.json'
 
       - name: Set up testing environment
         run: npm install -g jest
