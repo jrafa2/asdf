@@ -17,9 +17,6 @@ jobs:
           cache: yarn
           cache-dependency-path: '**/package-lock.json'
 
-      - name: Set up testing environment
-        run: npm install -g jest
-
       - name: Run tests
         working-directory: ./src
         run: |
