@@ -23,4 +23,6 @@ jobs:
 
       - name: Run tests
         working-directory: ./src
-        run: jest
+        run: |
+          cd src
+          jest
