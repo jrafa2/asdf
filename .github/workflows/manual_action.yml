@@ -16,9 +16,11 @@ jobs:
           node-version: 16.x
           
       - name: Run npm install
+        working-directory: ./src
         run: npm install
         
       - name: Install jest
+        working-directory: ./src
         run: npm install jest
 
       - name: Run tests
