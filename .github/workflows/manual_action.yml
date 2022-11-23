@@ -17,11 +17,15 @@ jobs:
           
       - name: Run npm install
         working-directory: ./src
-        run: npm install
+        run: |
+          pwd
+          npm install
         
       - name: Install jest
         working-directory: ./src
-        run: npm install jest
+        run: |
+          pwd
+          npm install jest
 
       - name: Run tests
         working-directory: ./src
