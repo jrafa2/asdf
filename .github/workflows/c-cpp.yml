@@ -16,4 +16,4 @@ jobs:
     - name: make
       run: gcc test/test.c 
     - name: run
-      run: ./test
+      run: ./test/test
