@@ -15,5 +15,7 @@ jobs:
       uses: actions/checkout@v4
     - name: make
       run: gcc test/test.c 
+    - name: debug
+      run: dir test
     - name: run
-      run: ./test/test
+      run: bash test/test
