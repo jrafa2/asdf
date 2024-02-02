@@ -18,4 +18,4 @@ jobs:
     - name: debug
       run: ls -R
     - name: run
-      run: bash test/test.o
+      run: test/test.o
