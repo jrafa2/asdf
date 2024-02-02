@@ -14,8 +14,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: make
-      run: gcc test/test.c -o test/test.o; chmod +x test/test.o
+      run: gcc test/test.c -o test/test.o; chmod +x test/test.o; gcc test/test_bdd.c -o test/test_bdd.o; chmod + test/test_bdd.o
     - name: debug
       run: ls -R
     - name: run
-      run: test/test.o
+      run: test/test.o; test/test_bdd.o
