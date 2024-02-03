@@ -19,3 +19,11 @@ jobs:
       run: ls -R
     - name: run
       run: test/test.o; test/test_bdd.o
+#https://github.com/marketplace/actions/testforest-dashboard
+    - name: Create test summary
+      uses: test-summary/action@dist
+      with:
+        paths: test/unit_test_result.tap
+        output: test-summary.md
+      if: always()
+        
