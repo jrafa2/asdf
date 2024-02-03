@@ -24,6 +24,11 @@ jobs:
       uses: test-summary/action@dist
       with:
         paths: test/unit_test_result.tap
-        output: test-summary.md
+        output: test/test-summary.md
       if: always()
-        
+    - name: Upload test summary
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-summary
+        path: test/test-summary.md
+      if: always()
