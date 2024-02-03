@@ -1,1 +1,6 @@
-
+Test suite1
+  test1 (OK)
+  test2 (OK)
+  test3 (FAIL)
+    Check failed: 1 == 0
+      at test/test_bdd.c:12
