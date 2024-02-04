@@ -20,7 +20,8 @@ jobs:
         gcc test/test.c -o test/test.o; 
         chmod +x test/test.o; 
         gcc test/test_bdd.c -o test/test_bdd.o; 
-        chmod + test/test_bdd.o
+        chmod + test/test_bdd.o;
+        echo "--------------------------------"
         echo "error=$(echo "asdfailedsf" | grep failed | wc --lines)" >> $GITHUB_ENV
         echo $GITHUB_ENV
         echo $error
