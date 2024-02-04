@@ -23,7 +23,7 @@ jobs:
         chmod + test/test_bdd.o;
         echo "--------------------------------"
         echo "asdfailedsf" | grep failed | wc --lines
-        echo "error=$(echo "asdfailedsf" | grep failed | wc --lines)" >> $GITHUB_ENV
+        error=$(echo "asdfailedsf" | grep failed | wc --lines)
         echo "${GITHUB_ENV}"
         echo "${error}"
         if [[ $error -ge 1 ]]
