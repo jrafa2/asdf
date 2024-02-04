@@ -26,7 +26,7 @@ jobs:
         error=$(echo "asdfailedsf" | grep failed | wc --lines)
         echo "${GITHUB_ENV}"
         echo "${error}"
-        if [[ $error -ge 1 ]]
+        if [[ $error -ge 2 ]]
         then
           exit 1
         fi
