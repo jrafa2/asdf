@@ -14,7 +14,20 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: make
-      run: git submodule update --init --recursive; ls -R; gcc test/test.c -o test/test.o; chmod +x test/test.o; gcc test/test_bdd.c -o test/test_bdd.o; chmod + test/test_bdd.o
+      run: |
+        git submodule update --init --recursive; 
+        ls -R; 
+        gcc test/test.c -o test/test.o; 
+        chmod +x test/test.o; 
+        gcc test/test_bdd.c -o test/test_bdd.o; 
+        chmod + test/test_bdd.o
+        echo "error=$(echo "asdfailedsf" | grep failed | wc --lines)" >> $GITHUB_ENV
+        echo $GITHUB_ENV
+        echo $error
+        if [[ $error -ge 1 ]]
+        then
+          exit 1
+        fi
     - name: debug
       run: ls -R
     - name: run
