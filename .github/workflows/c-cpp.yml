@@ -47,3 +47,5 @@ jobs:
         name: test-summary
         path: cat test/test-summary.md; test/test-summary.md
       if: always()
+    - name: Adding markdown
+      run: echo cat test/test-summary.md >> $GITHUB_STEP_SUMMARY
